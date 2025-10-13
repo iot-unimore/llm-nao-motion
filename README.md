@@ -2,14 +2,17 @@
 
 [![Paper](https://img.shields.io/badge/Paper-ICCVW%202025-blue)](https://iris.unimore.it/retrieve/320173f0-7f6e-4a62-ad1e-93be3acdc292/2025247674.pdf)
 
+![Method Overview](media/method.png)
+
+
 🤖 This is the official repository for the paper **"LLMs as NAO Robot 3D Motion Planners"** presented at the 2025 IEEE/CVF International Conference on Computer Vision (ICCVW) Workshop of Assistive Computer Vision and Robotics (ACVR), Honolulu, United States. 🌺
+
+<img src="web/static/logo.png" alt="NAO team" width="150px">
 
 > 🙋 **Authors:** Riccardo Catalini*, Giacomo Salici* ✉️, Federico Biagi, Guido Borghi, Luigi Biagiotti, Roberto Vezzani.  
 > 🏫 **University of Modena and Reggio Emilia**  
 > 📬 `name.surname@unimore.it`
 
-
----
 
 ## 📋 Abstract
 
@@ -17,15 +20,13 @@ This study demonstrates the capabilities of state-of-the-art Large Language Mode
 
 We evaluated seven different LLMs (ChatGPT-4o, LLaMA 3.3 70B, LLaMA 4 Maverick, Gemini 2.0 Flash, Claude 3.7 Sonnet, DeepSeek-V3, and Qwen 2.5 Max) through a blind user study with over 50 participants, generating more than 2,000 responses. The results highlight that the majority of LLMs are capable of planning correct and complete recognizable actions for the NAO robot.
 
-
-
 ### 🎯 Key Features
 
-- **Zero-shot and One-shot Prompting:** Evaluation of LLMs' ability to generate robot poses with and without kinematic information
-- **Multi-LLM Comparison:** Comprehensive analysis of 7 state-of-the-art LLMs
-- **User Study:** Rigorous evaluation with 50+ participants across 15 different actions
-- **Practical Application:** Direct generation of executable joint angle sequences for NAO robot
-- **Open Resources:** All prompts, data, and evaluation results publicly available
+- Demonstration that LLMs have the capability of addressing the motion generation task.
+- Comparative evaluation of seven LLMs generating NAO joint sequences in zero-shot and one-shot prompting
+- Generation of synthetic data consisting of different robot’s poses
+- Large-scale blind study: participants watched NAO videos, identified actions, and chose best matches across models, enabling statistical comparisons.
+
 
 ### 🔬 Research Questions Addressed
 
@@ -39,43 +40,15 @@ We evaluated seven different LLMs (ChatGPT-4o, LLaMA 3.3 70B, LLaMA 4 Maverick, 
 ✅ Variations stem from differences in parameter count, context window handling, and internal representation of physical dynamics.
 
 
-
-
 ## 🏗️ Repository Structure
 
-
-
-## 🎬 Video Samples
-
-All generated action videos are available in the `videos/samples/` directory, organized by:
-- LLM model
-- Prompting strategy (zero-shot/one-shot)
-- Action type (15 actions total)
-
-A demo compilation showcasing all models is available at `videos/demo_compilation.mp4`.
-
----
-
-## 📝 Tested Actions
-
-The following 15 actions were evaluated (inspired by NTU RGB-D dataset):
-
-1. Arm circles
-2. Cheer up
-3. Clapping
-4. Hand shaking
-5. Hands up
-6. Hand waving
-7. Kick something
-8. Nod head
-9. Pick up
-10. Point to something
-11. Salute
-12. Shake head
-13. Sitting down
-14. Throw
-15. Walking towards
-
+```
+/
+├── web/                    # Web application for interaction and visualization
+├── prompts/                # Generated model control prompts
+├── media/                  # Images and videos for documentation
+└── README.md               # This file
+```
 
 ## 📖 Citation
 
