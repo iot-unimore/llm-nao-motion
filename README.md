@@ -27,6 +27,31 @@ We evaluated seven different LLMs (ChatGPT-4o, LLaMA 3.3 70B, LLaMA 4 Maverick, 
 - Generation of synthetic data consisting of different robot’s poses
 - Large-scale blind study: participants watched NAO videos, identified actions, and chose best matches across models, enabling statistical comparisons.
 
+### 📽️ Simulated samples
+
+<table>
+    <tr>
+        <td>
+            <img src="media/0_claude_clapping.gif" alt="Pose 1" width="100%">
+            <p align="center">Zero Shot Clapping by Claude</p>
+        </td>
+        <td>
+            <img src="media/0_gemini_kick_something.gif" alt="Pose 2" width="100%">
+            <p align="center">Zero Shot Kick Something by Gemini</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="media/1_chat_nod_head.gif" alt="Pose 3" width="100%">
+            <p align="center">One Shot Nod Head by ChatGPT-4o</p>
+        </td>
+        <td>
+            <img src="media/1_deepseek_point_to_something.gif" alt="Pose 4" width="100%">
+            <p align="center">One Shot Point to Something by DeepSeek</p>
+        </td>
+    </tr>
+</table>
+
 
 ### 🔬 Research Questions Addressed
 
