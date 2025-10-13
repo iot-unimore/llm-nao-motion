@@ -1,0 +1,19 @@
+    # Starting position (standing)
+
+    # Bending knees slightly
+
+    # Lowering upper body, looking down
+
+    # Extending arms forward
+
+    # Opening hands for grasping
+
+    # Closing hands to grasp object
+
+    # Lifting object up slightly
+
+    # Straightening knees partially while holding object
+
+    # Standing upright with object
+
+    # Bringing object closer to body

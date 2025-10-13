@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% block title %}About the User Study{% endblock %}
+{% block content %}
+<img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo">
+<h1>{% if lang == 'it' %}Generazione di Pose Robotiche: User Study{% else %}Robot Pose Generation: User Study{% endif %}</h1>
+
+{% if session.username and not deactivated%}
+<div class="card">
+
+  <p>{% if lang == 'it' %}Benvenuto{% else %}Welcome{% endif %}, <strong>{{ session.username }}</strong>! <a href="/logout">[Logout]</a></p>
+  <p> {% if answer_count > 0 %}
+    {% if lang == 'it' %}Hai inviato{% else %}You've submitted{% endif %} {{ answer_count }} {% if lang == 'it' %}risposte finora.{% else %}responses so far.{% endif %} <br>
+    {% if answer_count < 30 %} {% if lang=='it' %} Sei quasi arrivato — prova a raggiungere 30 per completare l'obiettivo. <br> Grazie per il tuo contributo!
+      {% else %}
+      You're almost there — try to reach 30 to complete the goal. <br> Thanks for contributing!
+      {% endif %}
+      {% else %}
+      {% if lang == 'it' %}
+      Hai raggiunto l'obiettivo! Se lo desideri, puoi continuare a contribuire ancora.
+      {% else %}
+      You've reached the goal! Feel free to continue if you'd like to contribute more.
+      {% endif %}
+      {% endif %}
+      {% endif %}
+  </p>
+
+  <div class="button-group">
+
+    <button onclick="location.href='{{ url_for(cta_link) }}'">{{cta_text}}</button>
+  </div>
+</div>
+{% endif %}
+
+<p><strong>{% if lang == 'it' %}I Large Language Models sono capaci di generare movimenti robotici coerenti con ciò che gli viene chiesto?
+    {% else %}Are LLMs capable of humanoid robot motion generation?{% endif %}</strong></p>
+
+<p>
+  {% if lang == 'it' %}
+  Questo studio mira a valutare la qualità della generazione di movimenti robotici di diversi modelli famosi (ChatGPT, Gemini, Llama, Claude…). Dopo aver scelto uno username ti verranno mostrati delle brevi animazioni di un Nao robot e dovrai rispondere a tre tipi di domande:
+
+  {% else %}
+  This study is aimed to evaluate the quality of robot motion generation. You'll watch short video clips of NAO robot and respond to two types of questions:
+  {% endif %}
+</p>
+
+<ul>
+  <li>
+    {% if lang == 'it' %}
+    Nella prima parte, ti verrà chiesto di identificare <strong>quale azione viene eseguita</strong> dal robot nel video.
+    {% else %}
+    Firstly, you will be given a video and asked to identify <strong>which action is being performed</strong>.
+    {% endif %}
+  </li>
+  <li>
+    {% if lang == 'it' %}
+    Nella seconda parte, tra quattro video diversi, dovrai <strong>selezionare quello che, secondo te, esegue meglio l'azione</strong> descritta.
+    {% else %}
+    Next, you will see six videos at the same time and asked to <strong>select the one that better performs</strong> a described action.
+    {% endif %}
+  </li>
+  <li>
+    {% if lang == 'it' %}
+    Nella terza parte, dopo aver comparato i movimenti del robot da due video diversi, dovrai decidere se i due Nao eseguono <strong>la stessa azione oppure no</strong>.
+    {% else %}
+    Finally, you will be asked to compare two videos and decide whether the two Nao are performing <strong>the same action or not</strong>.
+    {% endif %}
+  </li>
+</ul>
+
+<p>
+  <strong>{% if lang == 'it' %}Ogni parte è composta da 10/15 domande e dovresti completare tutte{% else %}Each part is composed of 10/15 questions, and you should complete all the parts{% endif %}</strong>
+  {% if lang == 'it' %}per terminare lo studio.{% else %}to finish the study.{% endif %}
+  {% if lang == 'it' %}
+  Il tempo necessario per completare lo studio è di circa 10 minuti.
+  {% else %}
+  The time required to complete the study is approximately 10 minutes.
+  {% endif %}
+</p>
+
+<p>
+  <strong>{% if lang == 'it' %}Se vuoi sospendere la compilazione, puoi farlo in qualsiasi momento e riprendere più tardi, il sistema ricorderà i tuoi progressi.{% else %}If you want to suspend the study, you can do so at any time and return later, the study will remember your progress.{% endif %}</strong>
+</p>
+
+<p>
+  {% if lang == 'it' %}
+  Lo studio è completamente anonimo e le tue risposte saranno utilizzate solo per scopi di ricerca. Grazie per la partecipazione!
+  {% else %}
+  The study is completely anonymous, and your responses will be used for research purposes only. Thank you for your participation!
+  {% endif %}
+</p>
+
+{% if deactivated %}
+<div class="card">
+  <h4>{% if lang == 'it' %}Lo studio tornerà presto, grazie per la pazienza!{% else %}The study will be back soon, thank you for your patience!{% endif %}</h4>
+</div>
+
+{% else %}
+
+{% if not session.username %}
+<div class="card">
+  <form method="post" action="{{ url_for('index') }}">
+    <label for="username">{% if lang == 'it' %}Inserisci uno username per continuare (per privacy, evita di usare il tuo nome):{% else %} 
+      Enter a username to continue (for privacy, please avoid using your name):{% endif %}</label><br>
+      
+    <input type="text" id="username" name="username" required>
+    <input type="submit" value="{% if lang == 'it' %}Accedi{% else %}Login{% endif %}">
+  </form>
+</div>
+{% endif %}
+
+{% endif %}
+{% endblock %}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="{{ lang or 'en' }}">
+
+<head>
+  <meta charset="UTF-8">
+  <title>
+    {% block title %}{% endblock %} - Robot Pose Generation
+  </title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='logo.png') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="container">
+    
+    <div style="text-align: right; margin-bottom: 10px;" class="header">
+      {% if request.path != '/' %}
+      <a href="/" class="home-button"> 👈 {{ "Back to Home" if lang == "en" else "Torna alla home" }}</a>
+      {% endif %}
+
+      <form method="post" action="{{ url_for('change_lang') }}">
+        <select name="lang" onchange="this.form.submit()">
+          <option value="en" {% if lang == 'en' %}selected{% endif %}>🇺🇸 English</option>
+          <option value="it" {% if lang == 'it' %}selected{% endif %}>🇮🇹 Italiano</option>
+        </select>
+      </form>
+    </div>
+
+    {% block content %}{% endblock %}
+  </div>
+
+  {% if answer_count > 0 and session.username and not deactivated %}
+  <div id="progress-bar-container">
+    <div id="progress-bar"></div>
+  </div>
+  <script>
+    const progressBar = document.getElementById('progress-bar');
+    progressBar.style.width = {{answer_count if answer_count <= 35 else 35}} / 35 * 100 + '%';
+  </script>
+  {% endif %}
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}Classify Action{% endblock %}
+{% block content %}
+ 
+        {% if completed != true %}
+            <h3>{{ "QUESTION" if lang == "en" else "DOMANDA" }} {{answer_count + 1}} / 35</h3>
+        {% else %}
+            <h3>{{ "EXTRA QUESTIONS" if lang == "en" else "DOMANDE EXTRA" }}</h3>
+            <p class="caption">
+              {% if lang == "en" %}
+              You have already completed the survey, but if you want you can continue! Thank you! {% else %}
+              Hai già completato lo studio, ma se vuoi puoi continuare! Grazie! {% endif %}
+            </p>
+        {% endif %} 
+      <h2>{{ "What action is being performed in this video?" if lang == "en" else "Quale azione viene eseguita in questo video?" }}</h2>
+      <p class="caption">
+        {% if lang == "en" %}
+        Please select the action that best describes the video. If you think none of the options are correct, please select the one less bad. Thank you!
+        {% else %}
+        Seleziona l'azione che meglio descrive il video. Se pensi che nessuna delle opzioni sia corretta, seleziona quella meno sbagliata. Grazie!
+        {% endif %}
+      </p>
+      <div class="video-wrapper">
+        <video width="100%" height="auto" autoplay muted loop>
+          <source src="{{ url_for('static', filename='videos/' + video) }}" type="video/mp4">
+          {{ "Your browser does not support the video tag." if lang == "en" else "Il tuo browser non supporta il tag video." }}
+        </video>
+      </div>
+      <form method="POST">
+        <input type="hidden" name="actions" value='{{ actions | join(",") }}'>
+        <input type="hidden" name="video" value='{{ video }}'>
+        <div class="radio-group c2">
+          {% for act in actions %}
+            <label class="radio-wrapper">
+              <input type="radio" name="identified_action" value="{{ act }}" required>
+              <div class="custom-radio">{{ act }}</div>
+            </label>
+          {% endfor %}
+        </div>
+        <div class="button-group">
+            <button type="submit">{{ "Submit" if lang == "en" else "Invia" }}</button>
+          </div>
+        </form>
+      
+{% endblock %}

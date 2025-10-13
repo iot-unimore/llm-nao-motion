@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}Select Best Video{% endblock %}
+{% block content %}
+{% if completed == true %}
+<p>
+  {{ "You have already completed the survey, so no more answers are necessary." 
+  if lang == "en" else 
+  "Hai già completato lo studio, quindi non sono necessarie altre risposte." }}
+</p>
+<div class="button-group">
+  <button onclick="window.location.href='/'">{{ "Back to Home" if lang == "en" else "Torna alla Home" }}</button>
+</div>
+
+{% else %}
+<h3>{{ "QUESTION" if lang == "en" else "DOMANDA" }} {{answer_count +1 }} / 35</h3>
+<h2>{{ "Which video best represents the action:" if lang == "en" else "Quale video rappresenta meglio l'azione:" }} "{{ action }}"?</h2>
+<p class="caption">
+  {% if lang == "en" %}
+  Please select the video that best represents the action. Please ignore the angle of the camera, refer just to the robot. When the action includes object, be aware that it is not included in the simulation. Thank you!
+  {% else %}
+  Seleziona il video che rappresenta meglio l'azione. Ignora l'angolo della telecamera, fai riferimento solo al robot. Quando l'azione include un oggetto, tieni presente che non è incluso nella simulazione. Grazie!
+  {% endif %}
+</p>
+<form method="POST">
+  <input type="hidden" name="action" value='{{ action }}'>
+  <input type="hidden" name="videos" value='{{ videos | join(",") }}'>
+  <div class="radio-group c2">
+    {% for video in videos %}
+    <label class="radio-wrapper">
+      <input type="radio" name="best_video" value="{{ video }}" required>
+      <div class="custom-radio">
+        <video width="100%" height="auto" autoplay muted loop>
+          <source src="{{ url_for('static', filename='videos/' + video) }}" type="video/mp4">
+          {{ "Your browser does not support the video tag." if lang == "en" else "Il tuo browser non supporta il tag video." }}
+        </video>
+        {{ "Model" if lang == "en" else "Modello" }} {{ loop.index }}
+      </div>
+    </label>
+    {% endfor %}
+  </div>
+  <div class="button-group">
+    <button type="submit">{{ "Submit" if lang == "en" else "Invia" }}</button>
+  </div>
+</form>
+{% endif %}
+{% endblock %}

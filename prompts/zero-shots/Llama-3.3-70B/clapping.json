@@ -1,0 +1,11 @@
+[
+    {"RShoulderPitch": 0.0, "LShoulderPitch": 0.0, "RShoulderRoll": 0.0, "LShoulderRoll": 0.0, "RElbowYaw": 0.0, "LElbowYaw": 0.0, "RElbowRoll": 0.0, "LElbowRoll": 0.0, "RWristYaw": 0.0, "LWristYaw": 0.0, "RHand": 0.0, "LHand": 0.0},
+    {"RShoulderPitch": -0.2, "LShoulderPitch": -0.2, "RShoulderRoll": 0.2, "LShoulderRoll": -0.2, "RElbowYaw": 0.0, "LElbowYaw": 0.0, "RElbowRoll": 0.0, "LElbowRoll": 0.0, "RWristYaw": 0.0, "LWristYaw": 0.0, "RHand": 0.0, "LHand": 0.0},
+    {"RShoulderPitch": -0.4, "LShoulderPitch": -0.4, "RShoulderRoll": 0.4, "LShoulderRoll": -0.4, "RElbowYaw": 0.0, "LElbowYaw": 0.0, "RElbowRoll": 0.0, "LElbowRoll": 0.0, "RWristYaw": 0.0, "LWristYaw": 0.0, "RHand": 0.0, "LHand": 0.0},
+    {"RShoulderPitch": -0.6, "LShoulderPitch": -0.6, "RShoulderRoll": 0.6, "LShoulderRoll": -0.6, "RElbowYaw": 0.0, "LElbowYaw": 0.0, "RElbowRoll": 0.0, "LElbowRoll": 0.0, "RWristYaw": 0.0, "LWristYaw": 0.0, "RHand": 0.0, "LHand": 0.0},
+    {"RShoulderPitch": -0.8, "LShoulderPitch": -0.8, "RShoulderRoll": 0.8, "LShoulderRoll": -0.8, "RElbowYaw": 0.0, "LElbowYaw": 0.0, "RElbowRoll": 0.0, "LElbowRoll": 0.0, "RWristYaw": 0.0, "LWristYaw": 0.0, "RHand": 0.0, "LHand": 0.0},
+    {"RShoulderPitch": -0.6, "LShoulderPitch": -0.6, "RShoulderRoll": 0.6, "LShoulderRoll": -0.6, "RElbowYaw": 0.0, "LElbowYaw": 0.0, "RElbowRoll": 0.0, "LElbowRoll": 0.0, "RWristYaw": 0.0, "LWristYaw": 0.0, "RHand": 0.0, "LHand": 0.0},
+    {"RShoulderPitch": -0.4, "LShoulderPitch": -0.4, "RShoulderRoll": 0.4, "LShoulderRoll": -0.4, "RElbowYaw": 0.0, "LElbowYaw": 0.0, "RElbowRoll": 0.0, "LElbowRoll": 0.0, "RWristYaw": 0.0, "LWristYaw": 0.0, "RHand": 0.0, "LHand": 0.0},
+    {"RShoulderPitch": -0.2, "LShoulderPitch": -0.2, "RShoulderRoll": 0.2, "LShoulderRoll": -0.2, "RElbowYaw": 0.0, "LElbowYaw": 0.0, "RElbowRoll": 0.0, "LElbowRoll": 0.0, "RWristYaw": 0.0, "LWristYaw": 0.0, "RHand": 0.0, "LHand": 0.0},
+    {"RShoulderPitch": 0.0, "LShoulderPitch": 0.0, "RShoulderRoll": 0.0, "LShoulderRoll": 0.0, "RElbowYaw": 0.0, "LElbowYaw": 0.0, "RElbowRoll": 0.0, "LElbowRoll": 0.0, "RWristYaw": 0.0, "LWristYaw": 0.0, "RHand": 0.0, "LHand": 0.0}
+    ]

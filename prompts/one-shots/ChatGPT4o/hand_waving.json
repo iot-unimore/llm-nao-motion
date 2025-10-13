@@ -1,0 +1,44 @@
+[
+    {
+        "RElbowYaw": 1.8,
+        "RElbowRoll": 1.0,
+        "RShoulderPitch": 1.0,
+        "RShoulderRoll": -0.2,
+        "RWristYaw": 0.0
+    },
+    {
+        "RElbowYaw": 1.8,
+        "RElbowRoll": 1.1,
+        "RShoulderPitch": 1.0,
+        "RShoulderRoll": -0.2,
+        "RWristYaw": 0.5
+    },
+    {
+        "RElbowYaw": 1.8,
+        "RElbowRoll": 1.2,
+        "RShoulderPitch": 1.0,
+        "RShoulderRoll": -0.2,
+        "RWristYaw": -0.5
+    },
+    {
+        "RElbowYaw": 1.8,
+        "RElbowRoll": 1.1,
+        "RShoulderPitch": 1.0,
+        "RShoulderRoll": -0.2,
+        "RWristYaw": 0.5
+    },
+    {
+        "RElbowYaw": 1.8,
+        "RElbowRoll": 1.2,
+        "RShoulderPitch": 1.0,
+        "RShoulderRoll": -0.2,
+        "RWristYaw": -0.5
+    },
+    {
+        "RElbowYaw": 1.8,
+        "RElbowRoll": 1.0,
+        "RShoulderPitch": 1.0,
+        "RShoulderRoll": -0.2,
+        "RWristYaw": 0.0
+    }
+]

@@ -1,0 +1,59 @@
+[
+    {
+        "RShoulderPitch": 0.8,
+        "RShoulderRoll": -0.2,
+        "LShoulderPitch": 1.4,
+        "LShoulderRoll": 0.2,
+        "LElbowYaw": -1.2,
+        "LElbowRoll": -0.4,
+        "LWristYaw": 0.1
+    },
+    {
+        "RShoulderPitch": 0.8,
+        "RShoulderRoll": -0.2,
+        "RElbowYaw": 1.3,
+        "RElbowRoll": 0.3,
+        "RWristYaw": 0.0,
+        "LShoulderPitch": 1.4,
+        "LShoulderRoll": 0.2,
+        "LElbowYaw": -1.2,
+        "LElbowRoll": -0.4,
+        "LWristYaw": 0.1
+    },
+    {
+        "RShoulderPitch": 0.8,
+        "RShoulderRoll": -0.2,
+        "RElbowYaw": 1.3,
+        "RElbowRoll": 0.5,
+        "RWristYaw": 0.0,
+        "LShoulderPitch": 1.4,
+        "LShoulderRoll": 0.2,
+        "LElbowYaw": -1.2,
+        "LElbowRoll": -0.4,
+        "LWristYaw": 0.1
+    },
+    {
+        "RShoulderPitch": 0.8,
+        "RShoulderRoll": -0.2,
+        "RElbowYaw": 1.3,
+        "RElbowRoll": 0.3,
+        "RWristYaw": 0.0,
+        "LShoulderPitch": 1.4,
+        "LShoulderRoll": 0.2,
+        "LElbowYaw": -1.2,
+        "LElbowRoll": -0.4,
+        "LWristYaw": 0.1
+    },
+    {
+        "RShoulderPitch": 0.8,
+        "RShoulderRoll": -0.2,
+        "RElbowYaw": 1.3,
+        "RElbowRoll": 0.5,
+        "RWristYaw": 0.0,
+        "LShoulderPitch": 1.4,
+        "LShoulderRoll": 0.2,
+        "LElbowYaw": -1.2,
+        "LElbowRoll": -0.4,
+        "LWristYaw": 0.1
+    }
+]

@@ -1,0 +1,277 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center;
+  color: #222;
+}
+
+.container {
+  max-width: 800px;
+  width: 90%;
+
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+h3 {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+  color: #bbb
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #bbb;
+  margin-bottom: 2rem;
+}
+
+.caption {
+  font-size: 0.9rem;
+  color: #bbb;
+  margin-bottom: 1rem;
+}
+
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+video {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.card {
+  background: #eeeeee;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.card ul {
+  padding-left: 1.2rem;
+  margin-top: 1rem;
+}
+
+.card li {
+  margin-bottom: 0.5rem;
+}
+
+.button-group {
+  margin-top: 2rem;
+  display: grid;
+  
+  grid-template-columns: repeat(auto-fit, minmax(200px,100%));
+  justify-content: stretch;
+  
+  gap: 10px;
+  flex-direction: row;
+}
+
+button, input[type="submit"] {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  background: #5F42F3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button {
+  padding: 2rem 1.5rem;
+  width: 100%;
+
+}
+
+input[type="text"] {
+  padding:1rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  margin: 5px;
+  box-sizing: border-box;
+}
+
+button:hover, input[type="submit"]:hover {
+  background-color: #4a37c0;
+}
+
+.footer {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  color: #bbb;
+  text-align: center;
+}
+
+form {
+  max-width: 100%;
+}
+
+.radio-group {
+  display: grid;
+  gap: 1rem;
+}
+
+.c3 {
+  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+}
+
+.c2{
+  grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+}
+
+.radio-wrapper {
+  position: relative;
+}
+
+.radio-wrapper input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.custom-radio {
+  display: block;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: #eeeeee;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  color: #000;
+}
+
+.radio-wrapper input[type="radio"]:checked + .custom-radio {
+  background-color: #5F42F3;
+  color: white;
+}
+
+.custom-radio:hover {
+  background-color: #d0d0d0;
+}
+
+
+
+.logo {
+  max-width: 100%;
+  width: 200px;
+  height: auto;
+  margin-bottom: 1em;
+}
+
+/* Responsive Typography */
+@media (max-width: 800px) {
+  body {
+    background-color: white;
+  }
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .radio-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container {
+    padding: 20px;
+    margin: 0px, 0px;
+    border-radius: 0px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+}
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
+
+}
+.home-button {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 14px;
+  border: 0px;
+  border-radius: 8px;
+  background-color: white;
+  color: #222;
+  outline: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+  appearance: none;
+  cursor: pointer;
+}
+
+/* Language Selector */
+select[name="lang"] {
+  padding: 6px 12px;
+  font-size: 14px;
+  border: 1px solid #222;
+  border-radius: 8px;
+  background-color: #eeeeee;
+  color: #222;
+  outline: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.home-button:hover{
+  color: #5F42F3;
+}
+
+select[name="lang"]:hover  {
+  border-color: #5F42F3;
+}
+
+select[name="lang"]:focus {
+  border-color: #555;
+  box-shadow: 0 0 0 2px rgba(100, 100, 255, 0.2);
+}
+
+
+#progress-bar-container {
+  width: 100%;
+  background-color: #eeeeee;
+  overflow: hidden;
+  height: 20px;
+  position: fixed;
+  bottom: 0;
+}
+
+#progress-bar {
+  height: 100%;
+  background: linear-gradient(to right, #5F42F3, #FF69B4);
+  transition: width 0.3s ease;
+  border-radius: 0 8px 8px 0;
+}

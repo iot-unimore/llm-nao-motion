@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}Same action{% endblock %}
+{% block content %}
+
+{% if completed != true %}
+<h3>{{ "QUESTION" if lang == "en" else "DOMANDA" }} {{answer_count + 1}} / 35</h3>
+{% else %}
+<h3>{{ "EXTRA QUESTIONS" if lang == "en" else "DOMANDE EXTRA" }}</h3>
+<p class="caption">
+  {% if lang == "en" %}
+  You have already completed the survey, but if you want you can continue! Thank you! {% else %}
+  Hai già completato lo studio, ma se vuoi puoi continuare! Grazie! {% endif %}
+</p>
+{% endif %} 
+
+<h2>{{ "Is the robot in the two videos performing the same action?" if lang == "en" else "Il robot nei due video sta eseguendo la stessa azione?" }}</h2>
+<p class="caption">
+  {% if lang == "en" %}
+ According to your opinion, is the robot performing the same action? Do not consider the angle of the camera or the movement that the robot is doing, just focus on the action. Thank you!
+  {% else %}
+Secondo la tua sensibilità, il robot sta eseguendo la stessa azione? Non considerare l'angolo della telecamera o il movimento che il robot sta facendo, concentrati solo sull'azione. Grazie!
+  {% endif %}
+<div class="radio-group c2">
+    {% for video in videos %}
+        <video width="100%" height="auto" autoplay muted loop>
+          <source src="{{ url_for('static', filename='videos/' + video) }}" type="video/mp4">
+          {{ "Your browser does not support the video tag." if lang == "en" else "Il tuo browser non supporta il tag video." }}
+        </video>
+    {% endfor %}
+</div>
+<br><br>
+<form method="POST">
+  <input type="hidden" name="action" value='{{ action }}'>
+  <input type="hidden" name="videos" value='{{ videos | join(",") }}'>
+  <div class="radio-group c2">
+    <label class="radio-wrapper">
+      <input type="radio" name="expert_like" value="Yes" required>
+      <div class="custom-radio">{{ "Yes" if lang == "en" else "Sì" }}</div>
+    </label>
+    <label class="radio-wrapper">
+      <input type="radio" name="expert_like" value="No" required>
+      <div class="custom-radio">{{ "No" if lang == "en" else "No" }}</div>
+    </label>
+  </div>
+  <div class="button-group">
+    <button type="submit">{{ "Submit" if lang == "en" else "Invia" }}</button>
+  </div>
+</form>
+{% endblock %}

@@ -1,0 +1,13 @@
+[
+    {"LShoulderPitch": 1.57, "LShoulderRoll": 0.3, "LElbowYaw": -1.57, "LElbowRoll": -0.1, "LWristYaw": 0, "LHand": 0},
+    {"LShoulderPitch": 1.57, "LShoulderRoll": 0.3, "LElbowYaw": -1.57, "LElbowRoll": -0.5, "LWristYaw": 0, "LHand": 0},
+    {"LShoulderPitch": 1.3, "LShoulderRoll": 0.3, "LElbowYaw": -1.57, "LElbowRoll": -0.9, "LWristYaw": 0, "LHand": 0},
+    {"LShoulderPitch": 1.0, "LShoulderRoll": 0.3, "LElbowYaw": -1.57, "LElbowRoll": -1.2, "LWristYaw": 0, "LHand": 0},
+    {"LShoulderPitch": 0.7, "LShoulderRoll": 0.3, "LElbowYaw": -1.57, "LElbowRoll": -1.4, "LWristYaw": 0, "LHand": 0.8},
+    {"LShoulderPitch": 0.7, "LShoulderRoll": 0.3, "LElbowYaw": -1.57, "LElbowRoll": -1.4, "LWristYaw": 0, "LHand": 1},
+    {"LShoulderPitch": 1.0, "LShoulderRoll": 0.3, "LElbowYaw": -1.57, "LElbowRoll": -1.2, "LWristYaw": 0, "LHand": 1},
+    {"LShoulderPitch": 1.3, "LShoulderRoll": 0.3, "LElbowYaw": -1.57, "LElbowRoll": -0.9, "LWristYaw": 0, "LHand": 1},
+    {"LShoulderPitch": 1.57, "LShoulderRoll": 0.3, "LElbowYaw": -1.57, "LElbowRoll": -0.5, "LWristYaw": 0, "LHand": 1},
+    {"LShoulderPitch": 1.57, "LShoulderRoll": 0.3, "LElbowYaw": -1.57, "LElbowRoll": -0.1, "LWristYaw": 0, "LHand": 1},
+    {"LShoulderPitch": 1.57, "LShoulderRoll": 0.3, "LElbowYaw": -1.57, "LElbowRoll": -0.1, "LWristYaw": 0, "LHand": 1}
+]
